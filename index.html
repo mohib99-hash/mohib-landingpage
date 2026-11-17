@@ -131,8 +131,8 @@ h2 em.acc{font-size:1.08em}
 /* about */
 .about{padding:110px 0}
 .about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
-.photo-card{position:relative;width:100%;border-radius:22px;background:linear-gradient(180deg,#F6D3D3,#FBEDE6);aspect-ratio:4/5;max-width:440px;box-shadow:0 24px 60px rgba(226,61,75,.18)}
-.photo-card img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:96%;border-radius:0 0 22px 22px}
+.photo-card{position:relative;width:100%;border-radius:22px;background:#FAF0E8;aspect-ratio:1/1;max-width:460px;box-shadow:0 24px 60px rgba(226,61,75,.18)}
+.photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:22px}
 .chip{position:absolute;background:#fff;border-radius:12px;padding:10px 14px;box-shadow:0 10px 30px rgba(15,27,45,.12);display:flex;gap:10px;align-items:center}
 .chip b{display:block;font-size:18px;font-weight:800;letter-spacing:-.02em}
 .chip span{font-size:11px;color:var(--muted)}
@@ -141,9 +141,9 @@ h2 em.acc{font-size:1.08em}
 .nametag b{display:block;font-size:15px}.nametag span{font-size:11.5px;opacity:.7}
 .about h2{margin-bottom:24px}
 .about p.body{font-size:17px;line-height:1.7;color:var(--muted);margin-bottom:16px}
-.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:14px;font-weight:600}
-.facts span{display:flex;align-items:center;gap:22px}
-.facts span+span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--crim);margin-left:-13px;margin-right:-9px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 12px;margin-top:26px;font-size:14px;font-weight:600}
+.facts span{white-space:nowrap;display:inline-flex;align-items:center;gap:12px}
+.facts span:not(:last-child)::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--crim)}
 
 /* fit */
 .fit{padding:100px 0;text-align:center}
@@ -220,9 +220,9 @@ footer nav a:hover{color:var(--crim)}
 @media (max-width:720px){
   .wrap{padding:0 20px}
   .nav .wrap{height:70px}
-  .logo{font-size:21px}.avatar{width:38px;height:38px}
-  .nav .btn{padding:11px 14px;font-size:13.5px}
-  .nav .btn svg{display:none}
+  .logo{font-size:17px;gap:9px}.avatar{width:34px;height:34px}
+  .nav .btn{gap:7px}
+  .nav .btn{padding:11px 13px;font-size:13px}
   .hero{padding:44px 0 80px}
   .hero::before{width:560px;height:560px;top:-140px}
   .pill{font-size:10.5px;padding:8px 12px}
@@ -244,9 +244,8 @@ footer nav a:hover{color:var(--crim)}
   .call-steps div:first-child{padding-left:18px;border-left:2px solid var(--line)}
   .faq{padding:72px 0 88px}
   .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
-  .facts span+span::before{display:none}
-  .facts span{padding-left:12px;position:relative}
-  .facts span::after{content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--crim)}
+  .facts span{padding-left:12px;position:relative;white-space:normal;display:block}
+  .facts span::after,.facts span:not(:last-child)::after{content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--crim)}
   .about .wrap{gap:56px}
   summary{font-size:17px;grid-template-columns:34px 1fr 24px}
   details p{padding:0 0 22px 34px}
@@ -263,7 +262,7 @@ footer nav a:hover{color:var(--crim)}
 
 <header class="nav" id="top">
   <div class="wrap">
-    <a href="#top" class="logo" aria-label="Mohib home"><span class="avatar"><img src="/assets/mohib-avatar.webp" alt="Mohib Ahmed Siddiqi"></span><span>Mohib<i>.</i></span></a>
+    <a href="#top" class="logo" aria-label="Mohib home"><span class="avatar"><img src="/assets/mohib-avatar.webp" alt="Mohib Ahmed Siddiqi"></span><span>Mohib Ahmed<i>.</i></span></a>
     <nav class="nav-links"><a href="#method">Method</a><a href="#about">About</a><a href="#faq">FAQ</a></nav>
     <a href="#book" class="btn btn-dark book">Book a free call <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
@@ -437,7 +436,7 @@ footer nav a:hover{color:var(--crim)}
 
 <footer>
   <div class="wrap">
-    <a href="#top" class="logo"><span class="avatar"><img src="/assets/mohib-avatar.webp" alt=""></span><span>Mohib<i>.</i></span></a>
+    <a href="#top" class="logo"><span class="avatar"><img src="/assets/mohib-avatar.webp" alt=""></span><span>Mohib Ahmed<i>.</i></span></a>
     <nav><a href="https://www.linkedin.com/in/mohibahmedsiddiqi/" target="_blank" rel="noopener">LinkedIn</a><a href="https://wa.me/923100470300" target="_blank" rel="noopener">WhatsApp</a><a href="#book">Book a call</a></nav>
     <span>© <span id="yr">2026</span> Mohib Ahmed Siddiqi</span>
   </div>
